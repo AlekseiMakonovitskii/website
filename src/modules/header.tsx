@@ -10,7 +10,9 @@ function Header() {
 				<div className="flex items-center justify-between gap-1 h-full">
 					<Logo />
 					<Nav />
-					<Clipboard>alexmakondev@gmail.com</Clipboard>
+					<div className="hidden md:block">
+						<Clipboard>alexmakondev@gmail.com</Clipboard>
+					</div>
 				</div>
 			</Container>
 		</header>
