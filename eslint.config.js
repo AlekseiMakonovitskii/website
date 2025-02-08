@@ -18,11 +18,29 @@ export default tseslint.config(
       'react-refresh': reactRefresh,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-console': ['warn', { allow: ['info', 'warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-var': 'error',
+      '@typescript-eslint/no-for-in-array': 'error',
+      '@typescript-eslint/no-magic-numbers': 'warn',
+      '@typescript-eslint/naming-convention': [
         'warn',
-        { allowConstantExport: true },
+        {
+          "selector": "variable",
+          "format": ["camelCase", "PascalCase"],
+          "leadingUnderscore": "allow",
+          "trailingUnderscore": "allow"
+        }
       ],
-    },
+      '@typescript-eslint/no-loop-func': 'error',
+      "max-len": ["error", { "code": 80, "tabWidth": 4 }],
+      "indent": ["warn", 4],
+    }
   },
 )
